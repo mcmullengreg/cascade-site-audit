@@ -1,5 +1,5 @@
 <template>
-  <strong>Block:</strong> {{ page.name }}
+  <strong>Template:</strong> {{ page.name }}
   <ul>
     <li><strong>Created:</strong> {{ page.createdDate }}</li>
     <li><strong>Created By:</strong> {{ page.createdBy }}</li>
@@ -14,7 +14,7 @@
 // @ is an alias to /src
 import axios from 'axios';
 export default {
-  name: 'Block',
+  name: 'Page',
   props: {
     id: String
   },
@@ -32,7 +32,7 @@ export default {
     async getPage() {
       const url = sessionStorage.getItem('url');
       const key = sessionStorage.getItem('apiKey');
-      this.page = await axios.post(url + "/api/v1/read/block/" + this.id, {
+      this.page = await axios.post(url + "/api/v1/read/template/" + this.id, {
           header: {
             'Content-Type': 'application/json'
           },
@@ -40,18 +40,7 @@ export default {
             'apiKey' : key
           }
         }).then( response => {
-          let asset = response.data.asset;
-          if ( "xhtmlDataDefinitionBlock" in asset ) {
-            return asset.xhtmlDataDefinitionBlock;
-          } else if ( "indexBlock" in asset ) {
-            return asset.indexBlock;
-          } else if ( "textBlock" in asset ) {
-            return asset.textBlock;
-          } else if ( "xhtml" in asset) {
-            return asset.xhtml; 
-          } else {
-            return asset;
-          }
+          return response.data.asset.template;
         });
     }
   }

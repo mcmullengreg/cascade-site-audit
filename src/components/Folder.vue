@@ -15,6 +15,9 @@
       <Page v-else-if="child.type== 'page'" :id="child.id" />
       <Reference v-else-if="child.type== 'reference'" :id="child.id" />
       <Block v-else-if="child.type.includes('block')" :id="child.id" />
+      <Link v-else-if="child.type.includes('symlink')" :id="child.id" />
+      <Format v-else-if="child.type.includes('format')" :id="child.id" />
+      <Template v-else-if="child.type.includes('template')" :id="child.id" />
       <span v-else>{{ child }}</span>
     </li>
   </ul>
@@ -27,6 +30,9 @@ import File from '@/components/File.vue';
 import Page from '@/components/Page.vue';
 import Reference from '@/components/Reference.vue';
 import Block from '@/components/Block.vue';
+import Link from '@/components/Link.vue';
+import Format from '@/components/Format.vue';
+import Template from '@/components/Template.vue';
 export default {
   name: 'Folder',
   props: {
@@ -41,7 +47,10 @@ export default {
     File,
     Page,
     Reference,
-    Block
+    Block,
+    Link,
+    Format,
+    Template
   },
   created(){
     this.getFolder();

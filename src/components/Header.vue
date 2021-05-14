@@ -1,13 +1,12 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
-    
+    <h1>Cascade Site List</h1>    
     <nav>
       <ul>
         <li v-if="sessionStorage.length == 2">
           <router-link :to="{ name: 'Sites' }">Sites List</router-link>
         </li>
-        <li><router-link to="/about">About This Tool</router-link></li>
+        <li><router-link to="/about">About Tool</router-link></li>
         <li v-if="sessionStorage.length == 2"><a href="?logout" @click.prevent="logout">Logout</a></li>
       </ul>
     </nav>
@@ -22,12 +21,7 @@ export default {
       sessionStorage: window.sessionStorage
     }
   },
-  props: {
-    title: {
-      type: String,
-      default: "Xavier University"
-    }
-  },
+  props: {},
   methods: {
     logout(){
       sessionStorage.removeItem("url");

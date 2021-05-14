@@ -47,4 +47,30 @@ p, label, input, ul{
 h1{
   text-align: center;
 }
+
+main a {
+  color: #007DB3;
+}
+
+main a:hover, main a:focus{
+  color: #004867;
+}
+
+main button{
+  background: #007DB3;
+  color: white;
+  padding: 1.5rem 6rem;
+  font-size: 20px;
+  box-shadow: none;
+  border:none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: inline-block;
+  margin: 2rem auto;
+}
+
+main button:focus, main button:hover{
+  background-color: #004867;
+}
+
 </style>
