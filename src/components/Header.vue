@@ -6,7 +6,9 @@
         <li v-if="sessionStorage.length == 2">
           <router-link :to="{ name: 'Sites' }">Sites List</router-link>
         </li>
-        <li><router-link to="/about">About Tool</router-link></li>
+        <li>
+          <router-link :to="{ name: 'About' }">About Tool</router-link>
+        </li>
         <li v-if="sessionStorage.length == 2"><a href="?logout" @click.prevent="logout">Logout</a></li>
       </ul>
     </nav>

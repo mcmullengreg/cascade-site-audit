@@ -13,3 +13,20 @@
   
   <p><strong>The developers of this project will not and do not take any responsibility for lost or stolen information due to security breaches within this tool or your personal/professional networks</strong>.</p>
 </template>
+
+<script>
+// @ is an alias to /src
+export default {
+  name: 'About',
+  data() {
+    return {
+    }
+  },
+  components: {
+  }
+}
+</script>
+
+<style scoped>
+  h1{ text-align: center; }
+</style>
