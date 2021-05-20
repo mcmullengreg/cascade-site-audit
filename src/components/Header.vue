@@ -65,6 +65,7 @@ header{
   padding: 2rem 4rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1 {

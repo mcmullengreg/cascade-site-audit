@@ -7,7 +7,7 @@
   <p>In order to access the system, you will need to <a href="https://www.hannonhill.com/cascadecms/latest/cascade-basics/account-settings.html#UserApiKey" target="_blank">generate an API Key</a> through your 
     Cascade CMS System. The site list will then automatically generate based on your specific user access.</p>
     
-  <p>Once the site list loads, select the site you wish to see the folder/file tree off.</p>
+  <p>Once the site list loads, select the site you wish to see the folder/file tree of.</p>
   
   <p>We are using SessionStorage to temporarily setup your access, so as to not really save anything within the application long term. YOU are responsible for the safety of your API Key.</p>
   
